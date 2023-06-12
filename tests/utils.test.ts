@@ -1,3 +1,3 @@
-it('Runs empty test', () => {
-  expect(true).toBeTruthy()
-})
+it("Runs empty test", () => {
+  expect(true).toBeTruthy();
+});
