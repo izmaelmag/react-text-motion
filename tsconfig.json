@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "moduleResolution": "nodenext",
     "target": "es5",
     "module": "esnext",
     "declaration": true,
@@ -8,6 +9,6 @@
     "jsx": "react",
     "esModuleInterop": true
   },
-  "include": ["src"],
+  "include": ["src", "./custom.d.ts"],
   "exclude": ["node_modules", "dist", "**/*.spec.tsx"]
 }

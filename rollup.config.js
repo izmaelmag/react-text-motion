@@ -5,6 +5,7 @@ import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
 export default {
+  preserveModules: true,
   input: "src/components/index.tsx",
   output: [
     {
@@ -23,6 +24,12 @@ export default {
     nodeResolve(),
     commonjs(),
     typescript(),
+    postcss({
+      modules: true,
+      plugins: [autoprefixer()],
+      sourceMap: true,
+      minimize: true,
+    }),
     terser(),
   ],
 };
